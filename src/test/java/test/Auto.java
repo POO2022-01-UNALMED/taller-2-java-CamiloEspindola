@@ -7,10 +7,18 @@ public class Auto {
 	String marca;
 	Motor motor;
 	int registro;
-	static int cantidadCreados;
-	public int cantidadAsientos() {
-		return asientos.length;	
-	}
+	 public static int cantidadCreados;
+	    
+	    
+	    int cantidadAsientos() {
+	    	int a = 0;
+	    	for (int i = 0; i < asientos.length; i++) {
+	    		if (asientos[i] != null) {
+	    			a++;
+	    		}
+			}
+	    	return a;
+	    }
 	
 	public String verificarIntegridad() {
 		int a = asientos.length;
